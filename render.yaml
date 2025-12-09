@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: solana-intel-backend
+    env: node
+    rootDir: backend
+    plan: free
+    buildCommand: |
+      npm install
+      npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 8080

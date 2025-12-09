@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Improved Dark Mode Styling ---------- */
+
+.dark body {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+.dark .card,
+.dark .panel,
+.dark .box,
+.dark .chart-container {
+  background-color: #161b22 !important;
+  border: 1px solid #30363d !important;
+  color: #e6edf3 !important;
+}
+
+.dark input {
+  background-color: #161b22 !important;
+  border: 1px solid #30363d !important;
+  color: #e6edf3 !important;
+}
+
+.dark button {
+  background-color: #30363d !important;
+  color: #e6edf3 !important;
+}
+
+.dark button:hover {
+  background-color: #3c444c !important;
+}
+
+/* Transaction list items */
+.transaction-item {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: 0.15s;
+  font-family: monospace;
+}
+
+.transaction-item:hover {
+  background-color: #1f242d;
+  border-color: #3d444d;
+}
+
+/* Make chart grid visible in dark mode */
+.dark .recharts-cartesian-grid-horizontal line,
+.dark .recharts-cartesian-grid-vertical line {
+  stroke: #30363d !important;
+}
+
+/* Tooltip dark mode fix */
+.dark .recharts-default-tooltip {
+  background-color: #161b22 !important;
+  border: 1px solid #30363d !important;
+  color: #e6edf3 !important;
+}
+
+.loader-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #4f46e5; /* Indigo */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
